@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <h1>
+    Somos feitos por nossas escolhas
+  </h1>
+    <style>
+        img {
+            width: 30em;
+
+        }
+        h1 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+             text-decoration: underline ;
+             
+        }
+        table {
+            display: flex;
+            justify-content: center;
+            border: solid 2px;
+            background-color: purple;
+            padding: 2em;
+
+        }
+
+        td {
+            background-color: black;
+            font-size: 5em;
+            color: white;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            place-items: center;
+            padding: 0.4em;
+            border: solid 6px;
+            border-color: white;
+             border-radius: 1em;
+        }
+
+        td:hover {
+            background-color: rgb(43, 43, 43);
+            cursor: pointer;
+        }
+    </style>
+    <title>Meu jogo da Velha</title>
+
+</head>
+
+<body>
+
+
+    <h1>
+
+
+    </h1>
+
+    <table>
+        <tbody>
+            <img src="https://www.leagueoflegends.com/static/marksman-479be0ed78d734df0bbf0dee3d6a512b.png" alt="">
+            <img src="https://www.leagueoflegends.com/static/marksman-479be0ed78d734df0bbf0dee3d6a512b.png" alt="">
+            <img src="https://www.leagueoflegends.com/static/marksman-479be0ed78d734df0bbf0dee3d6a512b.png" alt="">
+            <tr>
+                
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+            </tr>
+
+            <tr>
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+            </tr>
+
+            <tr>
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+                <td onclick="marcar (this)"></td>
+            </tr>
+            >
+        </tbody>
+    </table>
+    <script>
+        var jogador = "X"
+        function marcar(celula) {
+            if (celula.innerHTML) return
+            celula.innerHTML = jogador
+            if (jogador == "X") {
+                jogador = "O"
+            }
+            else {
+                jogador = "X"
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
