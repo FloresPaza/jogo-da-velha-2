@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socorro</title>
+
+    <h1>Jogo da Velha</h1>
+    <p>Parem de ser Chatos</p>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            text-align: center;
+            font-size: 6vw;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        p {
+            text-align: center;
+            font-size: 2vw;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+        td {
+            height: 100px;
+            width: 100px;
+            padding: 18px;
+            border-radius: 10px;
+            background-color: rgb(146, 25, 25);
+            text-align: center;
+            font-size: 80px;
+            color: rgb(174, 164, 164);
+        }
+        td:hover {
+            background-color: red;
+            opacity: 50%;
+        }
+    </style>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <td onclick="mark(0)"></td>
+            <td onclick="mark(1)"></td>
+            <td onclick="mark(2)"></td>
+        </tr>
+        <tr>
+            <td onclick="mark(3)"></td>
+            <td onclick="mark(4)"></td>
+            <td onclick="mark(5)"></td>
+        </tr>
+        <tr>
+            <td onclick="mark(6)"></td>
+            <td onclick="mark(7)"></td>
+            <td onclick="mark(8)"></td>
+        </tr>
+    </table>
+    <script>
+        let player = "X"
+        let table = ["", "", "", "", "", "", "", "", ""]
+
+        function mark(index) {
+            if (table[index] != "") return
+
+            table[index] = player 
+
+            player = player == "X" ? "O" : "X"
+
+            // if(player == "X"){
+            //     player = "O"
+            // } else {
+            //     player = "X"
+            // }
+
+            render()
+        }
+
+        function render() {
+            let tds = document.querySelectorAll("td")
+
+            tds.forEach((td, index) => {
+                    td.innerHTML = table[index]
+            })
+        }
+    </script>
+    <p>Feito por Patryck</p>
 </body>
 </html>
