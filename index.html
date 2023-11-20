@@ -87,13 +87,15 @@
         function marcar(celula) {
             if (celula.innerHTML) return
             celula.innerHTML = jogador
-            if (jogador == "X") {
-                jogador = "O"
-            }
-            else {
-                jogador = "X"
-            }
+            
+            // if (jogador == "X") {
+            //     jogador = "O"
+            // }
+            // else {
+            //     jogador = "X"
+            // }
 
+            jogador = jogador == "X" ? "O" : "X" 
 
         }
 
